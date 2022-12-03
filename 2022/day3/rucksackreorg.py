@@ -1,20 +1,19 @@
-def part1():
-    file = open("rucksackreorg.txt")
-    lines = file.readlines()
-    output = 0
-    for line in lines:
-        items = {}
-        for i in range(len(line)//2):
-            items[line[i]] = 1
-        j = len(line)//2
-        while line[j] not in items:
-            j += 1
-        if ord(line[j]) >= 97:
-            output += (ord(line[j])-96)
-        else:
-            output += (ord(line[j])-38)
-    print(output)
-    file.close()
+file = open("rucksackreorg.txt")
+lines = file.readlines()
+output = 0
+for line in lines:
+    items = {}
+    for i in range(len(line)//2):
+        items[line[i]] = 1
+    j = len(line)//2
+    while line[j] not in items:
+        j += 1
+    if ord(line[j]) >= 97:
+        output += (ord(line[j])-96)
+    else:
+        output += (ord(line[j])-38)
+print("Star 1 Solution:", output)
+file.close()
 
 file = open("rucksackreorg.txt")
 lines = file.readlines()
@@ -36,5 +35,5 @@ for n, line in enumerate(lines):
             break
     if n%3 == 2:
         group = {}
-print(output)
+print("Star 2 Solution:", output)
 file.close()
