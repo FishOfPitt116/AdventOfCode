@@ -1,7 +1,9 @@
 file = open("rucksackreorg.txt")
 lines = file.readlines()
-output = 0
-for line in lines:
+part1_output = 0
+part2_output = 0
+group = {}
+for n, line in enumerate(lines):
     items = {}
     for i in range(len(line)//2):
         items[line[i]] = 1
@@ -9,16 +11,9 @@ for line in lines:
     while line[j] not in items:
         j += 1
     if ord(line[j]) >= 97:
-        output += (ord(line[j])-96)
+        part1_output += (ord(line[j])-96)
     else:
-        output += (ord(line[j])-38)
-print("Star 1 Solution:", output)
-file.close()
-
-file = open("rucksackreorg.txt")
-lines = file.readlines()
-output = 0
-group = {}
+        part1_output += (ord(line[j])-38)
 for n, line in enumerate(lines):
     items = {}
     for item in line:
@@ -29,11 +24,12 @@ for n, line in enumerate(lines):
         items[item] = 1
         if group[item] == 3:
             if ord(item) >= 97:
-                output += (ord(item)-96)
+                part2_output += (ord(item)-96)
             else:
-                output += (ord(item)-38)
+                part2_output += (ord(item)-38)
             break
     if n%3 == 2:
         group = {}
-print("Star 2 Solution:", output)
+print("Star 1 Solution:", part1_output)
+print("Star 2 Solution:", part2_output)
 file.close()
