@@ -3,3 +3,4 @@ cd ../day2 && echo "Day 2: Rock Paper Scissors" && python3 rockpaperscissors.py 
 cd ../day3 && echo "Day 3: Rucksack Reorganization" && python3 rucksackreorg.py && echo "\n"
 cd ../day4 && echo "Day 4: Camp Cleanup" && python3 campcleanup.py && echo "\n"
 cd ../day5 && echo "Day 5: Supply Stacks" && python3 supplystacks.py && echo "\n"
+cd ../day6 && echo "Day 6: Tuning Trouble" && python3 tuningtrouble.py && echo "\n"
