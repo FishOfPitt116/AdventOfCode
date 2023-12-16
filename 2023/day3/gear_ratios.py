@@ -50,7 +50,6 @@ with open("gear_ratios.txt") as f:
     for i in range(len(lines)):
         for j in range(len(lines[i])):
             if lines[i][j] == "*":
-                print(i,j)
                 nums = []
                 coords = [(i-1, j), (i-1, j+1), (i, j+1), (i+1, j+1), (i+1, j), (i+1, j-1), (i, j-1), (i-1, j-1)]
                 for (curr_i, curr_j) in coords:
